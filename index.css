@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s all;
+    font-size: 2vmax;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+body{
+    user-select: none;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #c7dfbe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header,footer{
+    width: 100%;
+    background-color: rgb(64, 139, 64);
+    padding: 1.5% 0;
+    color: #dfd9d9;
+    text-align: center;
+}
+footer{
+    /* position: relative; */
+    font-size: 1.5vmax;
+    /* bottom: 0; */
+}
+main{
+    width: 100%;
+    min-height: 45vmax;
+    display: grid;
+    grid-template-rows: repeat(3,auto);
+    grid-template-columns: 1fr;
+    place-items: center;
+    grid-template-areas: "outer_box" "time_set"  "button"  ;
+    gap: 4%;
+    /* margin-bottom: 5%; */
+    justify-items: center;
+    align-items: center;
+    /* background: conic-gradient(from 0deg, #d4e157 0deg, #e1f5c4 360deg); */
+}
+p{
+    font-size: 2.5vmax;
+    font-weight: bold;
+}
+#outer_box{
+    width: 70%;
+    padding: 2%;
+    text-align: center;
+    margin-top: 2%;
+    grid-area: outer_box;
+    /* border: 2px solid #f00; */
+    border-radius: 50px;
+    background: conic-gradient(from 0deg, #b0bec5 0deg 60deg, #37474f 60deg 120deg, #b0bec5 120deg 180deg, #B0BEC5 180deg 240deg, #37474F 240deg 300deg, #B0BEC5 300deg 360deg);
+    /* background: conic-gradient(from 0deg, rgb(255, 116, 116) 0deg , rgb(121, 236, 121) 360deg); */
+    /* background: conic-gradient(from 0deg, #a8df65 0deg, #e0f2f1 360deg); */
+    /* background: conic-gradient(from 0deg, rgb(255, 116, 116) 0deg 90deg, rgb(121, 236, 121) 90deg 270deg,rgb(255,116,116) 270deg 360deg); */
+}
+#inner_box{
+    width: 100%;
+    background-color: #c0bcbc;
+    border-radius: 50px;
+    padding: 3%;
+}
+#time_set{
+    width: 70%;
+    padding: 2%;
+    text-align: center;
+    /* background: conic-gradient(from 0deg, rgb(255, 116, 116) 0deg 90deg, rgb(121, 236, 121) 90deg 270deg,rgb(255,116,116) 270deg 360deg); */    
+    background-color: #c0bcbc;
+    /* margin-top: 2%; */
+    grid-area: time_set;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 50px;
+}
+#buttons{
+    width: 70%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    grid-area: button;
+    /* border: 2px solid #f00; */
+    background-color: rgb(173, 171, 171);
+    border-radius: 50px;
+    margin-bottom: 2%;
+}
+button{
+    border: none;
+    padding: 2% 5%;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #c7dfbe;
+    background-color: rgb(64, 139, 64);
+}
+#time_set button{
+    padding: 2% 20%;
+}
+@media screen and (max-width: 850px) {
+    main{
+        height: 80vh;
+    }
+}
+@media screen and (max-width: 450px) {
+    /* main{
+        height: 80vh;
+    } */
+    #time_set{
+        border-radius: 10%;
+        flex-direction: column;
+    }
+    #time_set p{
+        font-size: 2vmax;
+    }
+    #time_set button{
+        padding: 2% 15%;
+    }
+    .time{
+        margin: 5% 0;
+    }
+}

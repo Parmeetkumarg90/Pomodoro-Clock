@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Clock</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pomodoro Clock</h1>
+    </header>
+    <main>
+        <div id="outer_box">
+            <div id="inner_box">
+                <label id="running_timer">00 : 00 : 00</label>
+                <p id="curr_time">Start Your Time?</p>
+            </div>
+        </div>
+        <div id="time_set">
+            <section class="time">
+                <p>Session Time</p>
+                <label id="session_time">00 : 00 </label>minute
+                <div class="buttons" id="session">
+                    <button>+</button>
+                    <button>-</button>
+                </div>
+            </section>
+            <section class="time">
+                <p>Break Time</p>
+                <label id="break_time">00 : 00 </label>minute
+                <div class="buttons" id="break">
+                    <button>+</button>
+                    <button>-</button>
+                </div>
+            </section>
+        </div>
+        <div id="buttons">
+            <button>Start</button>
+            <button>Reset</button>
+        </div>
+    </main>
+    <footer>
+        <h1>Work in session and rest in break</h1>
+    </footer>
+</body>
+<script src="index.js"></script>
+</html>
