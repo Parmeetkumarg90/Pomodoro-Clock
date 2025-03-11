@@ -57,7 +57,7 @@ start.addEventListener('click', (event) => {
                 ("0" + hour).slice(-2) + " : " +
                 ("0" + minute).slice(-2) + " : " +
                 ("0" + second).slice(-2) + " ";;
-        }, 10);
+        }, 1000);
     }
     else {
         clearInterval(id);
